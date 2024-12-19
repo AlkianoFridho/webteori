@@ -41,9 +41,17 @@
         // Registration logic here
       },
     },
+    mounted() {
+    // Cek dan hapus elemen 'chatgpt-sidebar' setelah komponen dimuat
+    const sidebar = document.querySelector('chatgpt-sidebar');
+    if (sidebar) {
+      sidebar.remove();
+    }
+  },
   };
   </script>
   
   <style scoped>
   /* Add your styles here */
+  @import url('../assets/css/login.css');
   </style>
